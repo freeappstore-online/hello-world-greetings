@@ -1,0 +1,14 @@
+{
+  "name": "hello-world",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": { "node": ">=22" },
+  "pnpm": { "onlyBuiltDependencies": ["esbuild"] },
+  "scripts": {
+    "dev": "pnpm --filter @hello-world/web dev",
+    "build": "pnpm --filter @hello-world/web build",
+    "preview": "pnpm --filter @hello-world/web preview",
+    "typecheck": "pnpm --filter @hello-world/web exec tsc -b",
+    "test": "pnpm --filter @hello-world/web test"
+  }
+}
