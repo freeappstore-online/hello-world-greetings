@@ -3,14 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "pnpm generate:icons && vite",
+    "build": "pnpm generate:icons && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "generate:icons": "pwa-assets-generator --manifest=false"
   },
   "dependencies": {
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "@freeappstore/sdk": "^0.16.47"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1",
@@ -19,6 +20,8 @@
     "@vitejs/plugin-react": "^4.3",
     "tailwindcss": "^4.1",
     "typescript": "^5.7",
-    "vite": "^6"
+    "vite": "^6",
+    "vite-plugin-pwa": "^1.0",
+    "@vite-pwa/assets-generator": "1.0.4"
   }
 }

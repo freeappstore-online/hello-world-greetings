@@ -67,7 +67,7 @@ export default function App() {
   const [name, setName] = useState(() => localStorage.getItem("helloworld_name") || "");
   const [nameInput, setNameInput] = useState(() => localStorage.getItem("helloworld_name") || "");
   const [autoPlay, setAutoPlay] = useState(false);
-  const [autoIndex, setAutoIndex] = useState(0);
+  const [, setAutoIndex] = useState(0);
 
   const filtered = LANGUAGES.filter(
     (l) =>
